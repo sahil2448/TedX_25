@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import Theme from "../../../public/Videos/Theme.mp4";
+import Theme from "../../../public/Videos/Theme.webm";
 import { IoVolumeMute } from "react-icons/io5";
 import { VscUnmute } from "react-icons/vsc";
 
@@ -9,14 +9,9 @@ const Hero = () => {
 
   const handlePlayVideo = () => {
     if (videoRef.current) {
-      if (videoRef.current.muted == true) {
-        videoRef.current.muted = false;
-        setSound(false);
-      } else {
-        videoRef.current.muted = true;
-        setSound(true);
-      }
-      videoRef.current.play();
+      const isMuted = videoRef.current.muted;
+      videoRef.current.muted = !isMuted;
+      setSound(!isMuted);
     }
   };
 
@@ -27,7 +22,7 @@ const Hero = () => {
         src={Theme}
         autoPlay
         loop
-        muted
+        muted={sound}
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
@@ -35,7 +30,7 @@ const Hero = () => {
         <button
           onClick={handlePlayVideo}
           className="bg-black hover:bg-red-700 transition-all duration-300 bg-opacity-50 text-white px-4 py-2 rounded hover:scale-1.5 absolute left-3 cursor-pointer tooltip"
-          data-tip={`${sound ? "Unmute" : "Mute"}`}
+          data-tip={`${sound ? "sound" : "Mute"}`}
         >
           {sound ? <VscUnmute /> : <IoVolumeMute />}
         </button>

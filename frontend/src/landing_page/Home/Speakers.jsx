@@ -225,7 +225,7 @@ const Speakers = () => {
           className="text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4vw] font-lexend font-extrabold leading-none tracking-[0.05em]"
           style={{
             WebkitTextFillColor: "black",
-            WebkitTextStrokeWidth: "0.75px",
+            WebkitTextStrokeWidth: "0.90px",
             WebkitTextStrokeColor: "white",
           }}
         >
@@ -233,15 +233,15 @@ const Speakers = () => {
         </h1>
       </div>
 
-      <div className="md:flex md:flex-row gap-10 md:justify-center h-[30rem]">
+      <div className="md:flex sm:flex-row gap-10 md:justify-center h-[25rem] ">
         <div
-          className="flex flex-col justify-center items-end md:pl-12"
+          className="flex flex-col justify-center  items-end md:pl-12"
           ref={speakerNameRef}
         >
-          <div className="text-white text-7xl md:text-8xl font-bold tracking-[0.5rem]">
+          <div className="text-white text-6xl md:text-7xl font-bold tracking-[0.5rem]">
             {speakers[activeSpeaker].name.split(" ")[0]}
           </div>
-          <div className="text-white text-5xl md:text-6xl font-bold tracking-[0.75rem]">
+          <div className="text-white text-4xl md:text-5xl font-bold tracking-[0.75rem]">
             {speakers[activeSpeaker].name.split(" ")[1]}
           </div>
         </div>
@@ -250,17 +250,17 @@ const Speakers = () => {
             <img
               src={speakers[activeSpeaker].image || "/placeholder.svg"}
               alt={speakers[activeSpeaker].name}
-              width={500}
-              height={600}
+              width={400}
+              height={500}
               className="z-10"
             />
           </div>
         </div>
       </div>
-      <div className="relative z-10  flex justify-center items-end  pt-3">
+      <div className="relative z-10  flex justify-center items-end ">
         <div
           ref={carouselRef}
-          className="flex gap-4 px-4 overflow-x-auto pb-8 pt-3 carousel carousel-center  max-w-md md:max-w-3xl mx-auto"
+          className="flex gap-4 px-4 overflow-x-auto pb-8 pt-3 carousel carousel-center  max-w-md md:max-w-2xl mx-auto"
         >
           {speakers.map((speaker, index) => (
             <div
@@ -276,9 +276,7 @@ const Speakers = () => {
               <img
                 src={speaker.image}
                 alt={speaker.name}
-                width={80}
-                height={100}
-                className="w-16 h-20 md:w-20 md:h-24 object-cover "
+                className="w-16 h-20 md:w-20 md:h-22 md:w-14 object-cover "
               />
             </div>
           ))}

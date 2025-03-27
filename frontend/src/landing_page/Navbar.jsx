@@ -7,10 +7,10 @@ function Navbar() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   const scrollToSection = (sectionId) => {
-    // const drawerCheckbox = document.getElementById("navbar-drawer");
-    // if (drawerCheckbox && drawerCheckbox.checked) {
-    //   drawerCheckbox.checked = false;
-    // }
+    const drawerCheckbox = document.getElementById("navbar-drawer");
+    if (drawerCheckbox && drawerCheckbox.checked) {
+      drawerCheckbox.checked = false;
+    }
 
     // Finding the target section
     const element = document.getElementById(sectionId);
@@ -27,7 +27,6 @@ function Navbar() {
 
     window.addEventListener("resize", checkScreenSize);
 
-    // Clean up
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
   const toggleMobileMenu = () => {
@@ -44,7 +43,7 @@ function Navbar() {
           <img src={NavLogo} alt="" />
         </Link>
         {isSmallScreen ? (
-          <div className="drawer flex justify-end">
+          <div className="drawer flex justify-end" id="navbar-drawer" checked>
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
             <div
               className="drawer-content p-3 rounded-sm text-black"

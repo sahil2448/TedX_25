@@ -2,10 +2,12 @@ import React, { useEffect } from "react";
 import Hero from "./Hero";
 import SpearkersPage from "./SpearkersPage";
 import AboutUsPage from "./AboutUsPage";
+import TapestryPage from "./TapestryPage";
 import Navbar from "../Navbar";
 import { useState, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import Tapestry from "./Tapestry";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
@@ -55,6 +57,9 @@ const HomePage = () => {
   return (
     <div className="" style={{ backgroundColor: "#0E0E0E" }}>
       {/* <Navbar /> */}
+      <section id="Tapestry-section" ref={Tapestry}>
+        <TapestryPage />
+      </section>
       <section id="hero-section" ref={heroRef}>
         <Hero />
       </section>

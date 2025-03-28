@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import SpearkersPage from "./SpearkersPage";
 import AboutUsPage from "./AboutUsPage";
 import TapestryPage from "./TapestryPage";
+import SponsersPage from "./SponsersPage";
 import Navbar from "../Navbar";
 import { useState, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -63,11 +64,12 @@ const HomePage = () => {
       <section id="hero-section" ref={heroRef}>
         <Hero />
       </section>
-      <section id="about-section">
-        <AboutUsPage />
-      </section>
+
       <section id="speakers-section">
         <SpearkersPage />
+      </section>
+      <section id="sponsers-section">
+        <SponsersPage />
       </section>
     </div>
   );

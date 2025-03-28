@@ -144,7 +144,7 @@ const Speakers = () => {
         scrollTrigger: {
           trigger: carouselRef.current,
           start: "top 140%",
-          end: "bottom 80%",
+          end: "bottom 110%",
           scrub: true,
         },
       }
@@ -220,9 +220,9 @@ const Speakers = () => {
         backgroundImage: `url(${Frame})`,
       }}
     >
-      <div className="w-full flex justify-end">
+      <div className="w-full flex justify-center md:justify-end">
         <h1
-          className="text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4vw] font-lexend font-extrabold leading-none tracking-[0.05em]"
+          className=" text-[5rem] lg:text-[8rem] xl:text-[9rem] font-lexend font-extrabold leading-none tracking-[0.05em]"
           style={{
             WebkitTextFillColor: "black",
             WebkitTextStrokeWidth: "0.90px",
@@ -233,9 +233,9 @@ const Speakers = () => {
         </h1>
       </div>
 
-      <div className="md:flex sm:flex-row gap-10 md:justify-center h-[25rem] ">
+      <div className="flex flex-col items-center sm:flex-row md:gap-10 md:justify-center h-[25rem] ">
         <div
-          className="flex flex-col justify-center  items-end md:pl-12"
+          className="flex flex-col justify-center items-end md:pl-12"
           ref={speakerNameRef}
         >
           <div className="text-white text-6xl md:text-7xl font-bold tracking-[0.5rem]">
@@ -250,9 +250,7 @@ const Speakers = () => {
             <img
               src={speakers[activeSpeaker].image || "/placeholder.svg"}
               alt={speakers[activeSpeaker].name}
-              width={400}
-              height={500}
-              className="z-10"
+              className="z-10 w-100px md:w-[400px]"
             />
           </div>
         </div>
@@ -276,7 +274,7 @@ const Speakers = () => {
               <img
                 src={speaker.image}
                 alt={speaker.name}
-                className="w-16 h-20 md:w-20 md:h-22 md:w-14 object-cover "
+                className="w-16 h-20  md:h-22 md:w-18 object-cover "
               />
             </div>
           ))}

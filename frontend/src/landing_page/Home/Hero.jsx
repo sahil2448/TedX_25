@@ -1,9 +1,59 @@
-import React, { useRef, useState } from "react";
+// import React, { useRef, useState } from "react";
+// import Theme from "../../../public/Videos/Theme.webm";
+// import { IoVolumeMute } from "react-icons/io5";
+// import { VscUnmute } from "react-icons/vsc";
+
+// const Hero = () => {
+//   const [sound, setSound] = useState(true);
+//   const videoRef = useRef(null);
+
+//   const handlePlayVideo = () => {
+//     if (videoRef.current) {
+//       const isMuted = videoRef.current.muted;
+//       videoRef.current.muted = !isMuted;
+//       setSound(!isMuted);
+//     }
+//   };
+
+//   return (
+//     <div className="relative w-full min-h-screen">
+//       <video
+//         ref={videoRef}
+//         src={Theme}
+//         autoPlay
+//         loop
+//         muted={sound}
+//         playsInline
+//         className="absolute top-0 left-0 w-full h-full object-cover z-0"
+//       />
+//       <div className="relative z-10 flex items-center justify-center h-screen">
+//         <button
+//           onClick={handlePlayVideo}
+//           className="bg-black hover:bg-red-700 transition-all duration-300 bg-opacity-50 text-white px-4 py-2 rounded hover:scale-1.5 absolute left-3 cursor-pointer tooltip"
+//           data-tip={`${sound ? "sound" : "Mute"}`}
+//         >
+//           {sound ? <VscUnmute /> : <IoVolumeMute />}
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Hero;
+
+"use client";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useState, useEffect, useRef } from "react";
 import Theme from "../../../public/Videos/Theme.webm";
 import { IoVolumeMute } from "react-icons/io5";
 import { VscUnmute } from "react-icons/vsc";
 
-const Hero = () => {
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
+export default function Hero() {
   const [sound, setSound] = useState(true);
   const videoRef = useRef(null);
 
@@ -14,29 +64,200 @@ const Hero = () => {
       setSound(!isMuted);
     }
   };
+  const themeRef = useRef(null);
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    // gsap.from(themeRef.current.querySelector("h1"), {
+    //   opacity: 0,
+    //   y: 50,
+    //   duration: 1,
+    //   ease: "power3.out",
+    // });
+    // gsap.from(themeRef.current.querySelector(".theme-content"), {
+    //   opacity: 0,
+    //   x: -50,
+    //   duration: 1,
+    //   delay: 0.3,
+    //   ease: "power3.out",
+    // });
+    // gsap.from(themeRef.current.querySelector(".video-box"), {
+    //   opacity: 0,
+    //   x: 50,
+    //   duration: 1,
+    //   delay: 0.3,
+    //   ease: "power3.out",
+    // });
+    // gsap.from(aboutRef.current.querySelector("h1"), {
+    //   scrollTrigger: {
+    //     trigger: aboutRef.current,
+    //     start: "top 80%",
+    //   },
+    //   opacity: 0,
+    //   y: 50,
+    //   duration: 1,
+    //   ease: "power3.out",
+    // });
+    // gsap.from(aboutRef.current.querySelector("p"), {
+    //   scrollTrigger: {
+    //     trigger: aboutRef.current,
+    //     start: "top 70%",
+    //   },
+    //   opacity: 0,
+    //   y: 30,
+    //   duration: 1,
+    //   delay: 0.3,
+    //   ease: "power3.out",
+    // });
+  }, []);
 
   return (
-    <div className="relative w-full min-h-screen">
-      <video
-        ref={videoRef}
-        src={Theme}
-        autoPlay
-        loop
-        muted={sound}
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-      />
-      <div className="relative z-10 flex items-center justify-center h-screen">
-        <button
-          onClick={handlePlayVideo}
-          className="bg-black hover:bg-red-700 transition-all duration-300 bg-opacity-50 text-white px-4 py-2 rounded hover:scale-1.5 absolute left-3 cursor-pointer tooltip"
-          data-tip={`${sound ? "sound" : "Mute"}`}
+    <>
+      <main className="bg-[#0e0e0e] min-h-screen text-white overflow-hidden lg:pl-10 lg:pr-10">
+        <section
+          ref={themeRef}
+          className="container mx-auto px-4 pt-20 relative"
         >
-          {sound ? <VscUnmute /> : <IoVolumeMute />}
-        </button>
-      </div>
-    </div>
-  );
-};
+          <h1
+            className="text-[#d9d9d9] text-7xl  md:text-7xl lg:text-8xl text-center mb-16  font-passion font-extrabold leading-normal"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(110, 110, 110, 0.46) 46.23%, rgba(212, 212, 212, 0.00) 90.52%)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              fontWeight: "10rem",
+            }}
+          >
+            Theme
+          </h1>
+          {/* grid md:grid-cols-2 gap-8 items-center */}
+          <div className="w-full flex flex-col md:flex-row md:justify-between md:items-center">
+            <div className="theme-content max-w-2xl">
+              <p className="text-sm md:text-base leading-relaxed">
+                TEDxIITRoorkee is organized by a group of enthusiasts who form a
+                part of the Entrepreneurship Cell IIT Roorkee. The spirit of TED
+                aligns closely with the primary aspiration of the E-CELL, which
+                is to foster the dissemination of knowledge, innovation, and
+                inspiration. Since its inception in 2010, TEDx IITRoorkee has
+                now become an annual event, playing host to a multitude of
+                speakers from various walks of life. TEDxIITRoorkee boasts of an
+                active following online, through its website and on various
+                social media channels. This year, it's coming back on April
+                20th, 2025.
+              </p>
+            </div>
 
-export default Hero;
+            <div className="relative video-box bg-white p-4 flex  h-[300px] md:w-[40rem]">
+              <video
+                ref={videoRef}
+                src={Theme}
+                autoPlay
+                loop
+                muted={sound}
+                playsInline
+                className="absolute top-0 left-0 w-full h-full object-cover z-0"
+              />
+              <div className="relative z-10 flex items-center left-10 bottom-22 justify-center h-screen">
+                <button
+                  onClick={handlePlayVideo}
+                  className="bg-black hover:bg-red-700 transition-all duration-300 bg-opacity-50 text-white px-4 py-2 rounded hover:scale-1.5 absolute right-0 cursor-pointer tooltip"
+                  data-tip={`${sound ? "sound" : "Mute"}`}
+                >
+                  {sound ? <VscUnmute /> : <IoVolumeMute />}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full h-32 mt-20">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1440"
+              height="815"
+              viewBox="0 0 1440 815"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_1976_1020)">
+                <path
+                  d="M0 107C0 107 352.5 -8.99998 720 107C1087.5 223 1440 107 1440 107V815H0V107Z"
+                  fill="#0E0E0E"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_d_1976_1020"
+                  x="-50"
+                  y="0.444458"
+                  width="1540"
+                  height="859.556"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="-5" />
+                  <feGaussianBlur stdDeviation="25" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.1 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_1976_1020"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_1976_1020"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+        </section>
+
+        <section
+          ref={aboutRef}
+          className="container mx-auto px-4 pe-10 relative flex flex-col md:items-start"
+        >
+          <h1
+            className="text-[#d9d9d9] text-7xl  md:text-7xl lg:text-8xl text-center mb-16  font-passion font-extrabold leading-normal"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(110, 110, 110, 0.46) 46.23%, rgba(212, 212, 212, 0.00) 90.52%)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              fontWeight: "10rem",
+            }}
+          >
+            About Us
+          </h1>
+
+          <div className="">
+            <p className="text-sm md:text-base leading-relaxed mb-20 md:w-[90%]">
+              TEDxIITRoorkee is organized by a group of enthusiasts who form a
+              part of the Entrepreneurship Cell IIT Roorkee. The spirit of TED
+              aligns closely with the primary aspiration of the E-CELL, which is
+              to foster the dissemination of knowledge, innovation, and
+              inspiration. Since its inception in 2010, TEDx IITRoorkee has now
+              become an annual event, playing host to a multitude of speakers
+              from various walks of life. TEDxIITRoorkee boasts of an active
+              following online, through its website and on various social media
+              channels. This year, it's coming back on April 20th, 2025.
+            </p>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+}

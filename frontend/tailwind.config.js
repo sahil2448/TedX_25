@@ -8,6 +8,9 @@ export default {
         scrollText: "scrollText 15s linear infinite",
       },
       fontFamily: {
+        passion: ['"Passion One"', "cursive"], // or another fallback
+      },
+      fontFamily: {
         lexend: ["Lexend", "sans-serif"],
       },
       textStrokeWidth: {

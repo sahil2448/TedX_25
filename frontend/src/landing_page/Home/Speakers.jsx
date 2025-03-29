@@ -238,10 +238,10 @@ const Speakers = () => {
           className="flex flex-col justify-center items-end md:pl-12"
           ref={speakerNameRef}
         >
-          <div className="text-white text-6xl md:text-7xl font-bold tracking-[0.5rem]">
+          <div className="text-white text-6xl md:text-7xl font-extrabold tracking-[0.5rem]">
             {speakers[activeSpeaker].name.split(" ")[0]}
           </div>
-          <div className="text-white text-4xl md:text-5xl font-bold tracking-[0.75rem]">
+          <div className="text-white text-4xl md:text-5xl font-bold tracking-[0.5rem]">
             {speakers[activeSpeaker].name.split(" ")[1]}
           </div>
         </div>
@@ -264,10 +264,10 @@ const Speakers = () => {
             <div
               key={index}
               ref={(el) => (carouselItemsRef.current[index] = el)}
-              className={`carousel-item rounded-3xl overflow-hidden border-3 transition-all duration-300 cursor-pointer ${
+              className={`carousel-item rounded-2xl overflow-hidden border-3 mr-2 transition-all duration-300 cursor-pointer ${
                 index === activeSpeaker
                   ? "scale-125 z-20 active bg-gradient-to-t from-black to-red-500 "
-                  : "border-transparent bg-gradient-to-t from-black to-transparent "
+                  : "border-white bg-gradient-to-t from-black to-transparent "
               }`}
               onClick={() => handleSpeakerClick(index)}
             >

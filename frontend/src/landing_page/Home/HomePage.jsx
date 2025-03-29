@@ -58,7 +58,7 @@ const HomePage = () => {
   return (
     <div className="" style={{ backgroundColor: "#0E0E0E" }}>
       {/* <Navbar /> */}
-      <section id="Tapestry-section" ref={Tapestry}>
+      <section id="Tapestry-section">
         <TapestryPage />
       </section>
       <section id="hero-section" ref={heroRef}>

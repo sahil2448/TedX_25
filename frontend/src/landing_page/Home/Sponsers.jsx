@@ -12,7 +12,7 @@ import TOI from "../../../public/Sponsers/TOI.png";
 const Sponsers = () => {
   return (
     <main>
-      <section>
+      <section className="h-[20vh] md:w-full">
         <h1
           className="text-[#d9d9d9] text-7xl  md:text-7xl lg:text-8xl text-center mb-16  font-passion font-extrabold leading-normal"
           style={{
@@ -26,8 +26,8 @@ const Sponsers = () => {
         >
           Sponsers
         </h1>
-        <div className="flex flex-col gap-10">
-          <div className="flex justify-evenly ">
+        <div className="flex w-[100%] md:w-full gap-2.5 flex-col md:gap-10 justify-self-center">
+          <div className="flex gap-4 justify-center md:gap-15">
             <div>
               <img src={NPCI} alt="" />
             </div>
@@ -41,7 +41,7 @@ const Sponsers = () => {
               <img src={TOI} alt="" />
             </div>
           </div>
-          <div className="flex flex-row justify-evenly ">
+          <div className="flex flex-row gap-4  w-[80%] mx-auto justify-self-center md:justify-center md:gap-18 md:w-full">
             <div className="bg-white">
               <img src={Infosys} alt="" />
             </div>
@@ -52,7 +52,7 @@ const Sponsers = () => {
               <img src={Samsung} alt="" />
             </div>
           </div>
-          <div className="flex flex-row justify-evenly ">
+          <div className="flex flex-row  gap-4  w-[60%] mx-auto justify-self-center md:gap-12 justify-center md:w-full">
             <div>
               <img src={OYO} alt="" />
             </div>
@@ -60,9 +60,9 @@ const Sponsers = () => {
               <img src={Cashify} alt="" />
             </div>
           </div>
-          <div className="flex flex-row justify-evenly ">
+          <div className="flex flex-row w-[40%] mx-auto justify-self-center md:justify-evenly md:w-full">
             <div className="bg-white px-3 py-2">
-              <img src={AWS} alt="" />
+              <img className="w-[4rem]" src={AWS} alt="" />
             </div>
           </div>
         </div>

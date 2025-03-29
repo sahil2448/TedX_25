@@ -7,19 +7,41 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 const Tapestry = () => {
-  // const contentRef = useRef(null);
-  // const imgRef = useRef(null);
+  const contentRef = useRef(null);
+  const imgRef = useRef(null);
 
-  // useGSAP(() => {
-  //   gsap.fromTo(contentRef.current,{
-  //     opacity:0,
-
-  //   })
-  // }, []);
+  useEffect(() => {
+    gsap.fromTo(
+      contentRef.current,
+      {
+        opacity: -1,
+        x: -400,
+      },
+      {
+        delay: 0.3,
+        opacity: 1,
+        duration: 1,
+        x: 0,
+      }
+    );
+    gsap.fromTo(
+      imgRef.current,
+      {
+        opacity: -1,
+        x: 400,
+      },
+      {
+        duration: 1,
+        delay: 0.3,
+        opacity: 1,
+        x: 0,
+      }
+    );
+  }, []);
 
   return (
-    <div className=" flex flex-col md:flex-row justify-center gap-20 items-center min-h-screen md:px-16 md:py-8">
-      <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+    <div className=" flex flex-col md:flex-row justify-center items-center  gap-20  min-h-screen md:px-16 md:py-8">
+      <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8" ref={contentRef}>
         <h1 className="text-5xl md:text-7xl lg:text-8xl uppercase tracking-wider mb-6">
           <p className="mb-8">Tapestry</p>
           <p>of Time</p>
@@ -42,6 +64,7 @@ const Tapestry = () => {
 
       <div>
         <img
+          ref={imgRef}
           src={X}
           alt="Tapestry visual"
           className="w-[30rem] md:max-w-[500px] h-auto object-contain"

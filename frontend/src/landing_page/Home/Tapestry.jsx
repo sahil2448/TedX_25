@@ -4,24 +4,17 @@ import X from "../../../public/Logos/X.png";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
 
 const Tapestry = () => {
   // const contentRef = useRef(null);
   // const imgRef = useRef(null);
 
-  // useEffect(() => {
-  //   gsap.fromTo(
-  //     contentRef.current,
-  //     {
-  //       opacity: 0,
-  //       x: -100,
-  //     },
-  //     {
-  //       opacity: 1,
-  //       x: 0,
-  //     }
-  //   );
+  // useGSAP(() => {
+  //   gsap.fromTo(contentRef.current,{
+  //     opacity:0,
+
+  //   })
   // }, []);
 
   return (

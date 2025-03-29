@@ -1,23 +1,26 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
+import { useEffect, useRef, useState } from "react";
 import X from "../../../public/Logos/X.png";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const Tapestry = () => {
   // const contentRef = useRef(null);
-  // const imageRef = useRef(null);
+  // const imgRef = useRef(null);
 
-  // useGSAP(() => {
+  // useEffect(() => {
   //   gsap.fromTo(
   //     contentRef.current,
-  //     { x: -100, opacity: 0 },
-  //     { x: 0, opacity: 1, duration: 1, ease: "power2.out" }
-  //   );
-  //   gsap.fromTo(
-  //     imageRef.current,
-  //     { x: 100, opacity: 0 },
-  //     { x: 0, opacity: 1, duration: 1, ease: "power2.out", delay: 0.2 }
+  //     {
+  //       opacity: 0,
+  //       x: -100,
+  //     },
+  //     {
+  //       opacity: 1,
+  //       x: 0,
+  //     }
   //   );
   // }, []);
 

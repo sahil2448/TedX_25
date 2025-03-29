@@ -41,7 +41,6 @@
 
 // export default Hero;
 
-"use client";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useState, useEffect, useRef } from "react";

@@ -157,7 +157,7 @@ function Navbar() {
               className="text-white text-sm hover:text-red-500 transition-all
               duration-300 btn btn-ghost hover:bg-white transition-colors
               cursor-pointer"
-              onClick={() => scrollToSection("about-section")}
+              onClick={() => scrollToSection("hero-section")}
             >
               <Link to="/">ABOUT US</Link>
             </button>

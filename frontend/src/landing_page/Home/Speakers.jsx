@@ -267,7 +267,7 @@ const Speakers = () => {
               className={`carousel-item rounded-3xl overflow-hidden border-3 transition-all duration-300 cursor-pointer ${
                 index === activeSpeaker
                   ? "scale-125 z-20 active bg-gradient-to-t from-black to-red-500 "
-                  : "border-transparent bg-gradient-to-t from-black to-blue-400 "
+                  : "border-transparent bg-gradient-to-t from-black to-transparent "
               }`}
               onClick={() => handleSpeakerClick(index)}
             >

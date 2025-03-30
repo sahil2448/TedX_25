@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+"use client";
+
+import { useEffect } from "react";
 import Frame from "../../../public/Speakers/Frame.png";
-import { useFfect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import Sp1 from "../../../public/Speakers/Sp1.png";
 import Sp2 from "../../../public/Speakers/Sp2.png";
@@ -8,11 +10,11 @@ import Sp3 from "../../../public/Speakers/Sp3.png";
 import Sp4 from "../../../public/Speakers/Sp4.png";
 import Sp5 from "../../../public/Speakers/Sp5.png";
 import Sp6 from "../../../public/Speakers/Sp6.png";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Sp7 from "../../../public/Speakers/Sp7.png";
 
 const Speakers = () => {
   const [activeSpeaker, setActiveSpeaker] = useState(0);
+  const [activeSection, setActiveSection] = useState(0);
   const speakerNameRef = useRef(null);
   const speakerImageRef = useRef(null);
   const carouselRef = useRef(null);
@@ -33,9 +35,56 @@ const Speakers = () => {
 
     const width = window.innerWidth;
     carousel.scrollTo({
-      left: width > 640 ? scrollLeft - 400 : scrollLeft,
+      left: width > 640 ? scrollLeft - 100 : scrollLeft,
       behavior: "smooth",
     });
+  };
+
+  const handleSectionClick = (index) => {
+    setActiveSection(index);
+    setActiveSpeaker(0); // Reset to first speaker when changing years
+
+    // Update carousel after state change
+    setTimeout(() => {
+      centerActiveSpeaker(0);
+
+      // Animate the speaker name and image when changing sections
+      gsap.fromTo(
+        speakerNameRef.current.children,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power1.out",
+        }
+      );
+
+      gsap.fromTo(
+        speakerImageRef.current,
+        { opacity: 0, x: 50 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.8,
+          ease: "power2.out",
+        }
+      );
+
+      // Animate carousel items
+      gsap.fromTo(
+        carouselRef.current.children,
+        { opacity: 0, scale: 0.8 },
+        {
+          opacity: 1,
+          scale: 1,
+          stagger: 0.05,
+          duration: 0.5,
+          ease: "back.out(1.7)",
+        }
+      );
+    }, 50);
   };
 
   const handleSpeakerClick = (index) => {
@@ -213,6 +262,172 @@ const Speakers = () => {
       image: `${Sp7}`,
     },
   ];
+  const speakers2022 = [
+    { id: 1, name: "ANUJ", image: `${Sp1}` },
+    {
+      id: 2,
+      name: "SARAH SMITH",
+      image: `${Sp2}`,
+    },
+    {
+      id: 3,
+      name: "VIDISH MISHRA",
+      image: `${Sp3}`,
+    },
+    {
+      id: 4,
+      name: "ALEX WONG",
+      image: `${Sp4}`,
+    },
+    {
+      id: 5,
+      name: "KRISHAN KUMAR",
+      image: `${Sp5}`,
+    },
+    {
+      id: 6,
+      name: "AMAN KUMAR",
+      image: `${Sp6}`,
+    },
+    {
+      id: 7,
+      name: "KARAN KUTHE",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+  ];
+  const speakers2023 = [
+    { id: 1, name: "ANUJ", image: `${Sp1}` },
+    {
+      id: 2,
+      name: "SARAH SMITH",
+      image: `${Sp2}`,
+    },
+    {
+      id: 3,
+      name: "VIDISH MISHRA",
+      image: `${Sp3}`,
+    },
+    {
+      id: 4,
+      name: "ALEX WONG",
+      image: `${Sp4}`,
+    },
+    {
+      id: 5,
+      name: "KRISHAN KUMAR",
+      image: `${Sp5}`,
+    },
+    {
+      id: 6,
+      name: "AMAN KUMAR",
+      image: `${Sp6}`,
+    },
+    {
+      id: 7,
+      name: "KARAN KUTHE",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+  ];
+  const speakers2024 = [
+    { id: 1, name: "ANUJ", image: `${Sp1}` },
+    {
+      id: 2,
+      name: "SARAH SMITH",
+      image: `${Sp2}`,
+    },
+    {
+      id: 3,
+      name: "VIDISH MISHRA",
+      image: `${Sp3}`,
+    },
+    {
+      id: 4,
+      name: "ALEX WONG",
+      image: `${Sp4}`,
+    },
+    {
+      id: 5,
+      name: "KRISHAN KUMAR",
+      image: `${Sp5}`,
+    },
+    {
+      id: 6,
+      name: "AMAN KUMAR",
+      image: `${Sp6}`,
+    },
+    {
+      id: 7,
+      name: "KARAN KUTHE",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+    {
+      id: 7,
+      name: "VIDISH MISHRA",
+      image: `${Sp7}`,
+    },
+  ];
+
+  const sections = [
+    { year: "2021", speakers: speakers },
+    { year: "2022", speakers: speakers2022 },
+    { year: "2023", speakers: speakers2023 },
+    { year: "2024", speakers: speakers2024 },
+  ];
 
   return (
     <div
@@ -234,53 +449,79 @@ const Speakers = () => {
           SPEAKER
         </h1>
       </div>
-        
-        
-      <div className="flex flex-col items-center sm:flex-row md:gap-10 md:justify-center h-[25rem] ">
-        <div
-          className="flex flex-col justify-center items-end md:pl-12"
-          ref={speakerNameRef}
-        >
-          <div className="text-white text-6xl md:text-7xl font-extrabold tracking-[0.5rem]">
-            {speakers[activeSpeaker].name.split(" ")[0]}
-          </div>
-          <div className="text-white text-4xl md:text-5xl font-bold tracking-[0.5rem]">
-            {speakers[activeSpeaker].name.split(" ")[1]}
-          </div>
+      <div className="flex justify-center md:gap-20 items-center">
+        <div className="flex flex-col gap-2">
+          {sections.map((section, index) => (
+            <button
+              key={index}
+              className={`text-2xl cursor-pointer transition-all duration-300 ${
+                activeSection === index
+                  ? "text-red-500 font-bold scale-110"
+                  : "text-gray-400 hover:text-gray-200"
+              }`}
+              onClick={() => handleSectionClick(index)}
+            >
+              {section.year}
+            </button>
+          ))}
         </div>
         <div>
-          <div ref={speakerImageRef} className="z-10">
-            <img
-              src={speakers[activeSpeaker].image || "/placeholder.svg"}
-              alt={speakers[activeSpeaker].name}
-              className="z-10 w-100px md:w-[400px]"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="relative z-10  flex justify-center items-end ">
-        <div
-          ref={carouselRef}
-          className="flex gap-4 px-4 overflow-x-auto pb-8 pt-3 carousel carousel-center  max-w-md md:max-w-2xl mx-auto"
-        >
-          {speakers.map((speaker, index) => (
+          <div className="flex flex-col items-center sm:flex-row md:gap-10 md:justify-center h-[25rem] ">
             <div
-              key={index}
-              ref={(el) => (carouselItemsRef.current[index] = el)}
-              className={`carousel-item rounded-2xl overflow-hidden border-3 mr-2 transition-all duration-300 cursor-pointer ${
-                index === activeSpeaker
-                  ? "scale-125 z-20 active bg-gradient-to-t from-black to-red-500 "
-                  : "border-white bg-gradient-to-t from-black to-transparent "
-              }`}
-              onClick={() => handleSpeakerClick(index)}
+              className="flex flex-col justify-center items-end md:pl-12"
+              ref={speakerNameRef}
             >
-              <img
-                src={speaker.image}
-                alt={speaker.name}
-                className="w-16 h-20  md:h-22 md:w-18 object-cover "
-              />
+              <div className="text-white text-6xl md:text-7xl font-extrabold tracking-[0.5rem]">
+                {
+                  sections[activeSection].speakers[activeSpeaker].name.split(
+                    " "
+                  )[0]
+                }
+              </div>
+              <div className="text-white text-4xl md:text-5xl font-bold tracking-[0.5rem]">
+                {sections[activeSection].speakers[activeSpeaker].name.split(
+                  " "
+                )[1] || ""}
+              </div>
             </div>
-          ))}
+            <div>
+              <div ref={speakerImageRef} className="z-10">
+                <img
+                  src={
+                    sections[activeSection].speakers[activeSpeaker].image ||
+                    "/placeholder.svg"
+                  }
+                  alt={sections[activeSection].speakers[activeSpeaker].name}
+                  className="z-10 w-100px md:w-[400px]"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="relative z-10  flex justify-center items-end ">
+            <div
+              ref={carouselRef}
+              className="flex gap-4 px-4 overflow-x-auto pb-8 pt-3 carousel carousel-center  max-w-md md:max-w-2xl mx-auto"
+            >
+              {sections[activeSection].speakers.map((speaker, index) => (
+                <div
+                  key={index}
+                  ref={(el) => (carouselItemsRef.current[index] = el)}
+                  className={`carousel-item rounded-2xl overflow-hidden border-3 mr-2 transition-all duration-300 cursor-pointer ${
+                    index === activeSpeaker
+                      ? "scale-125 z-20 active bg-gradient-to-t from-black to-red-500 "
+                      : "border-white bg-gradient-to-t from-black to-transparent "
+                  }`}
+                  onClick={() => handleSpeakerClick(index)}
+                >
+                  <img
+                    src={speaker.image || "/placeholder.svg"}
+                    alt={speaker.name}
+                    className="w-16 h-20 md:h-22 md:w-18 object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

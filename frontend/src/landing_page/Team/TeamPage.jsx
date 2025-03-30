@@ -19,25 +19,6 @@ import gsap from "gsap";
 function TeamPage() {
   const teamRef = useRef(null);
 
-  // useEffect(() => {
-  //   gsap.fromTo(
-  //     teamRef.current.children,
-  //     {
-  //       opacity: -1,
-  //       // scale: 0,
-  //       y: -100,
-  //       stagger: 1,
-  //     },
-  //     {
-  //       opacity: 1,
-  //       // scale: 1,
-  //       duration: 0.4,
-  //       stagger: 0.3,
-  //       y: 0,
-  //     }
-  //   );
-  // }, []);
-
   const teamMembers = [
     {
       name: "Anukriti Sethi",

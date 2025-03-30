@@ -55,7 +55,7 @@ const Speakers = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 0.3,
+        duration: 0.5,
         stagger: 0.1,
         ease: "power1.out",
       }
@@ -65,13 +65,13 @@ const Speakers = () => {
       {
         opacity: 0,
         x: 50,
-        duration: 0.1,
+        duration: 0.6,
         ease: "power2.out",
       },
       {
         opacity: 1,
         x: 0,
-        duration: 0.5,
+        duration: 0.8,
         ease: "power2.out",
       }
     );
@@ -140,10 +140,12 @@ const Speakers = () => {
       {
         opacity: 1,
         stagger: 0.2,
+
         // immediateRender: false,
         scrollTrigger: {
           trigger: carouselRef.current,
           start: "top 140%",
+
           end: "bottom 110%",
           scrub: true,
         },
@@ -232,7 +234,8 @@ const Speakers = () => {
           SPEAKER
         </h1>
       </div>
-
+        
+        
       <div className="flex flex-col items-center sm:flex-row md:gap-10 md:justify-center h-[25rem] ">
         <div
           className="flex flex-col justify-center items-end md:pl-12"

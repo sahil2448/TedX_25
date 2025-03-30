@@ -29,40 +29,40 @@ const Sponsers = () => {
         <div className="flex w-[100%] md:w-full gap-2.5 flex-col md:gap-10 justify-self-center">
           <div className="flex gap-4 justify-center md:gap-15">
             <div>
-              <img src={NPCI} alt="" />
+              <img src={NPCI} alt="" className="rounded-xl" />
             </div>
             <div>
-              <img src={Tides} alt="" />
+              <img src={Tides} alt="" className="rounded-xl" />
             </div>
             <div>
-              <img src={CashKaro} alt="" />
+              <img src={CashKaro} alt="" className="rounded-xl" />
             </div>
-            <div>
-              <img src={TOI} alt="" />
+            <div className="rounded-xl">
+              <img src={TOI} alt="" className="rounded-xl" />
             </div>
           </div>
           <div className="flex flex-row gap-4  w-[80%] mx-auto justify-self-center md:justify-center md:gap-18 md:w-full">
-            <div className="bg-white">
-              <img src={Infosys} alt="" />
+            <div className="bg-white rounded-xl">
+              <img src={Infosys} alt="" className="rounded-xl" />
             </div>
             <div>
-              <img src={NPCI} alt="" />
+              <img src={NPCI} alt="" className="rounded-xl" />
             </div>
-            <div className="bg-white pt-3 px-2">
-              <img src={Samsung} alt="" />
+            <div className="bg-white pt-3 px-2 rounded-xl">
+              <img src={Samsung} alt="" className="rounded-xl" />
             </div>
           </div>
           <div className="flex flex-row  gap-4  w-[60%] mx-auto justify-self-center md:gap-12 justify-center md:w-full">
             <div>
-              <img src={OYO} alt="" />
+              <img src={OYO} alt="" className="rounded-xl" />
             </div>
-            <div className="bg-white">
-              <img src={Cashify} alt="" />
+            <div className="bg-white rounded-xl">
+              <img src={Cashify} alt="" className="rounded-xl" />
             </div>
           </div>
-          <div className="flex flex-row w-[40%] mx-auto justify-self-center md:justify-evenly md:w-full">
-            <div className="bg-white px-3 py-2">
-              <img className="w-[4rem]" src={AWS} alt="" />
+          <div className="flex flex-row w-[40%] mx-auto justify-self-center md:justify-evenly md:w-full ">
+            <div className="bg-white px-3 py-2 rounded-xl">
+              <img className="w-[4rem] " src={AWS} alt="" />
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ const Tapestry = () => {
   return (
     <div className=" flex flex-col md:flex-row justify-center items-center  gap-20  min-h-screen md:px-16 md:py-8">
       <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8" ref={contentRef}>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl uppercase tracking-wider mb-6">
+        <h1 className="text-5xl  md:text-7xl lg:text-8xl uppercase tracking-wider mb-6 font-[marcellus]">
           <p className="mb-8">Tapestry</p>
           <p>of Time</p>
         </h1>
@@ -53,10 +53,10 @@ const Tapestry = () => {
         </p>
 
         <div className="flex flex-row gap-4">
-          <button className=" w-[10rem] py-2 border-2 cursor-pointer bg-red-600 rounded-xl border-none hover:bg-black hover:text-white transition-all duration-300 text-lg">
+          <button className=" w-[8rem] py-2 border-2 cursor-pointer bg-red-600 rounded-md border-none hover:bg-black hover:text-white transition-all duration-300 text-lg">
             Buy Ticket
           </button>
-          <button className=" w-[10rem] py-2 border-2 cursor-pointer border-white rounded-xl hover:bg-white hover:text-black transition-all duration-300 text-lg">
+          <button className=" w-[8rem] py-2 border-2 cursor-pointer border-white rounded-md hover:bg-white hover:text-black transition-all duration-300 text-lg">
             Buy T-Shirt
           </button>
         </div>

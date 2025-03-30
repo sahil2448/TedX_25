@@ -9,6 +9,7 @@ import { useState, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Tapestry from "./Tapestry";
+import EventsLinePage from "./EventsLinePage";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
@@ -31,28 +32,6 @@ const HomePage = () => {
         // scale: 1,
       }
     );
-    // gsap.fromTo(
-    //   speakerRef.current,
-    //   {
-    //     opacity: 0,
-    //     y: 50,
-    //     // scale: 0.9,
-    //     duration: 1,
-    //   },
-    //   {
-    //     opacity: 1,
-    //     y: 0,
-    //     duration: 4,
-    //     // scale: 1,
-    //     ease: "power3.out",
-    //     scrollTrigger: {
-    //       trigger: speakerRef.current, // Fixed: should be heroRef.current
-    //       start: "top 80%",
-    //       end: "bottom 60%",
-    //       scrub: true,
-    //     },
-    //   }
-    // );
   }, []);
 
   return (
@@ -64,10 +43,13 @@ const HomePage = () => {
       <section id="hero-section" ref={heroRef}>
         <Hero />
       </section>
-
+      <section>
+        <EventsLinePage />
+      </section>
       <section id="speakers-section">
         <SpearkersPage />
       </section>
+
       <section id="sponsers-section">
         <SponsersPage />
       </section>

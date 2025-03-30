@@ -1,5 +1,7 @@
 import React from "react";
 import Tapestry from "./Tapestry";
+
+
 const TapestryPage = () => {
   return (
     <div
@@ -12,6 +14,7 @@ const TapestryPage = () => {
       <Tapestry />
     </div>
   );
+  
 };
 
 export default TapestryPage;

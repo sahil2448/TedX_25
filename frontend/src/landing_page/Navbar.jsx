@@ -165,7 +165,7 @@ function Navbar() {
             <button>
               <Link
                 to="/register"
-                className="btn btn-sm bg-[#eb0028] hover:bg-[#d70000] text-white border-none rounded px-4 btn btn-ghost hover:bg-white transition-colors cursor-pointer"
+                className="btn btn-sm bg-[#eb0028] hover:bg-[#d70000] text-white border-none rounded px-4 btn btn-ghost  hover:scale-105 transition-all duration-75 transition-colors cursor-pointer"
               >
                 REGISTER
               </Link>

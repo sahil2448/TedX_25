@@ -1,46 +1,3 @@
-// import React, { useRef, useState } from "react";
-// import Theme from "../../../public/Videos/Theme.webm";
-// import { IoVolumeMute } from "react-icons/io5";
-// import { VscUnmute } from "react-icons/vsc";
-
-// const Hero = () => {
-//   const [sound, setSound] = useState(true);
-//   const videoRef = useRef(null);
-
-//   const handlePlayVideo = () => {
-//     if (videoRef.current) {
-//       const isMuted = videoRef.current.muted;
-//       videoRef.current.muted = !isMuted;
-//       setSound(!isMuted);
-//     }
-//   };
-
-//   return (
-//     <div className="relative w-full min-h-screen">
-//       <video
-//         ref={videoRef}
-//         src={Theme}
-//         autoPlay
-//         loop
-//         muted={sound}
-//         playsInline
-//         className="absolute top-0 left-0 w-full h-full object-cover z-0"
-//       />
-//       <div className="relative z-10 flex items-center justify-center h-screen">
-//         <button
-//           onClick={handlePlayVideo}
-//           className="bg-black hover:bg-red-700 transition-all duration-300 bg-opacity-50 text-white px-4 py-2 rounded hover:scale-1.5 absolute left-3 cursor-pointer tooltip"
-//           data-tip={`${sound ? "sound" : "Mute"}`}
-//         >
-//           {sound ? <VscUnmute /> : <IoVolumeMute />}
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Hero;
-
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useState, useEffect, useRef } from "react";
@@ -67,47 +24,94 @@ export default function Hero() {
   const aboutRef = useRef(null);
 
   useEffect(() => {
-    // gsap.from(themeRef.current.querySelector("h1"), {
-    //   opacity: 0,
-    //   y: 50,
-    //   duration: 1,
-    //   ease: "power3.out",
-    // });
-    // gsap.from(themeRef.current.querySelector(".theme-content"), {
-    //   opacity: 0,
-    //   x: -50,
-    //   duration: 1,
-    //   delay: 0.3,
-    //   ease: "power3.out",
-    // });
-    // gsap.from(themeRef.current.querySelector(".video-box"), {
-    //   opacity: 0,
-    //   x: 50,
-    //   duration: 1,
-    //   delay: 0.3,
-    //   ease: "power3.out",
-    // });
-    // gsap.from(aboutRef.current.querySelector("h1"), {
-    //   scrollTrigger: {
-    //     trigger: aboutRef.current,
-    //     start: "top 80%",
-    //   },
-    //   opacity: 0,
-    //   y: 50,
-    //   duration: 1,
-    //   ease: "power3.out",
-    // });
-    // gsap.from(aboutRef.current.querySelector("p"), {
-    //   scrollTrigger: {
-    //     trigger: aboutRef.current,
-    //     start: "top 70%",
-    //   },
-    //   opacity: 0,
-    //   y: 30,
-    //   duration: 1,
-    //   delay: 0.3,
-    //   ease: "power3.out",
-    // });
+    gsap.fromTo(
+      themeRef.current.querySelector("h1"),
+      {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power3.out",
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: themeRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+    gsap.fromTo(
+      themeRef.current.querySelector(".theme-content"),
+      {
+        opacity: 0,
+        x: -60,
+        delay: 1,
+        duration: 2,
+        ease: "power3.out",
+      },
+      {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: themeRef.current,
+          start: "top 60%",
+        },
+      }
+    );
+    gsap.fromTo(
+      themeRef.current.querySelector(".video-box"),
+      {
+        opacity: 0,
+        x: 60,
+        delay: 1,
+        ease: "power3.out",
+        duration: 2,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: themeRef.current,
+          start: "top 60%",
+        },
+      }
+    );
+    gsap.fromTo(
+      aboutRef.current.querySelector("h1"),
+      {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power3.out",
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+    gsap.fromTo(
+      aboutRef.current.querySelector("p"),
+      {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        delay: 0.3,
+        ease: "power3.out",
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top 70%",
+        },
+      }
+    );
   }, []);
 
   return (

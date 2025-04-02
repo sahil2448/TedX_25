@@ -40,7 +40,7 @@ const HomePage = () => {
       <section id="Tapestry-section">
         <TapestryPage />
       </section>
-      <section id="hero-section" ref={heroRef}>
+      <section id="about-section" ref={heroRef}>
         <Hero />
       </section>
       <section>

@@ -1,16 +1,33 @@
 "use client";
 
 import { useEffect } from "react";
-import Frame from "../../../public/Speakers/Frame.png";
+import Frame from "../../../public/Speakers2024/Frame.png";
 import { useRef, useState } from "react";
 import { gsap } from "gsap";
-import Sp1 from "../../../public/Speakers/Sp1.png";
-import Sp2 from "../../../public/Speakers/Sp2.png";
-import Sp3 from "../../../public/Speakers/Sp3.png";
-import Sp4 from "../../../public/Speakers/Sp4.png";
-import Sp5 from "../../../public/Speakers/Sp5.png";
-import Sp6 from "../../../public/Speakers/Sp6.png";
-import Sp7 from "../../../public/Speakers/Sp7.png";
+import Sp1 from "../../../public/speakers2024/Sp1.png";
+import Sp2 from "../../../public/speakers2024/Sp2.png";
+import Sp3 from "../../../public/speakers2024/Sp3.png";
+import Sp4 from "../../../public/speakers2024/Sp4.png";
+import Sp5 from "../../../public/speakers2024/Sp5.png";
+import Sp6 from "../../../public/speakers2024/Sp6.png";
+import Sp7 from "../../../public/Sp2019/Sp7.png";
+import Sp8 from "../../../public/Sp2019/Sp8.png";
+// import Sp9 from "../../../public/Sp2019/Sp9.png";
+import Sp10 from "../../../public/Sp2019/Sp10.png";
+import Sp11 from "../../../public/Sp2019/Sp11.png";
+import Sp12 from "../../../public/Sp2019/Sp12.png";
+import Sp13 from "../../../public/Sp2019/Sp13.png"; // 2019
+import Sp14 from "../../../public/Sp2017/Sp14.png";
+import Sp15 from "../../../public/Sp2017/Sp15.png";
+import Sp16 from "../../../public/Sp2017/Sp16.png";
+import Sp17 from "../../../public/Sp2017/Sp17.png";
+import Sp18 from "../../../public/Sp2017/Sp18.png";
+import Sp19 from "../../../public/Sp2017/Sp19.png"; // 2017
+import Sp20 from "../../../public/Sp2016/Sp20.png";
+import Sp21 from "../../../public/Sp2016/Sp21.png";
+import Sp22 from "../../../public/Sp2016/Sp22.png";
+import Sp23 from "../../../public/Sp2016/Sp23.png";
+import Sp24 from "../../../public/Sp2016/Sp24.png";
 
 const Speakers = () => {
   const [activeSpeaker, setActiveSpeaker] = useState(0);
@@ -209,165 +226,6 @@ const Speakers = () => {
     centerActiveSpeaker(activeSpeaker);
   }, [activeSpeaker]);
 
-  const speakers = [
-    { id: 1, name: "ANUJ", image: `${Sp1}` },
-    {
-      id: 2,
-      name: "SARAH SMITH",
-      image: `${Sp2}`,
-    },
-    {
-      id: 3,
-      name: "VIDISH MISHRA",
-      image: `${Sp3}`,
-    },
-    {
-      id: 4,
-      name: "ALEX WONG",
-      image: `${Sp4}`,
-    },
-    {
-      id: 5,
-      name: "KRISHAN KUMAR",
-      image: `${Sp5}`,
-    },
-    {
-      id: 6,
-      name: "AMAN KUMAR",
-      image: `${Sp6}`,
-    },
-    {
-      id: 7,
-      name: "KARAN KUTHE",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-  ];
-  const speakers2022 = [
-    { id: 1, name: "ANUJ", image: `${Sp1}` },
-    {
-      id: 2,
-      name: "SARAH SMITH",
-      image: `${Sp2}`,
-    },
-    {
-      id: 3,
-      name: "VIDISH MISHRA",
-      image: `${Sp3}`,
-    },
-    {
-      id: 4,
-      name: "ALEX WONG",
-      image: `${Sp4}`,
-    },
-    {
-      id: 5,
-      name: "KRISHAN KUMAR",
-      image: `${Sp5}`,
-    },
-    {
-      id: 6,
-      name: "AMAN KUMAR",
-      image: `${Sp6}`,
-    },
-    {
-      id: 7,
-      name: "KARAN KUTHE",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-  ];
-  const speakers2023 = [
-    { id: 1, name: "ANUJ", image: `${Sp1}` },
-    {
-      id: 2,
-      name: "SARAH SMITH",
-      image: `${Sp2}`,
-    },
-    {
-      id: 3,
-      name: "VIDISH MISHRA",
-      image: `${Sp3}`,
-    },
-    {
-      id: 4,
-      name: "ALEX WONG",
-      image: `${Sp4}`,
-    },
-    {
-      id: 5,
-      name: "KRISHAN KUMAR",
-      image: `${Sp5}`,
-    },
-    {
-      id: 6,
-      name: "AMAN KUMAR",
-      image: `${Sp6}`,
-    },
-    {
-      id: 7,
-      name: "KARAN KUTHE",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-  ];
   const speakers2024 = [
     { id: 1, name: "ANUJ", image: `${Sp1}` },
     {
@@ -400,32 +258,101 @@ const Speakers = () => {
       name: "KARAN KUTHE",
       image: `${Sp7}`,
     },
+  ];
+  const speakers2016 = [
+    { id: 1, name: "ANUJ", image: `${Sp20}` },
     {
-      id: 7,
+      id: 2,
+      name: "SARAH SMITH",
+      image: `${Sp21}`,
+    },
+    {
+      id: 3,
       name: "VIDISH MISHRA",
-      image: `${Sp7}`,
+      image: `${Sp22}`,
+    },
+    {
+      id: 4,
+      name: "ALEX WONG",
+      image: `${Sp23}`,
+    },
+    {
+      id: 5,
+      name: "KRISHAN KUMAR",
+      image: `${Sp24}`,
+    },
+  ];
+  const speakers2017 = [
+    { id: 1, name: "ANUJ", image: `${Sp13}` },
+    {
+      id: 2,
+      name: "SARAH SMITH",
+      image: `${Sp14}`,
+    },
+    {
+      id: 3,
+      name: "VIDISH MISHRA",
+      image: `${Sp15}`,
+    },
+    {
+      id: 4,
+      name: "ALEX WONG",
+      image: `${Sp16}`,
+    },
+    {
+      id: 5,
+      name: "KRISHAN KUMAR",
+      image: `${Sp17}`,
+    },
+    {
+      id: 6,
+      name: "AMAN KUMAR",
+      image: `${Sp18}`,
     },
     {
       id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
+      name: "KARAN KUTHE",
+      image: `${Sp19}`,
+    },
+  ];
+  const speakers2019 = [
+    { id: 1, name: "ANUJ", image: `${Sp7}` },
+    {
+      id: 2,
+      name: "SARAH SMITH",
+      image: `${Sp8}`,
+    },
+    // {
+    //   id: 3,
+    //   name: "VIDISH MISHRA",
+    //   image: `${Sp9}`,
+    // },
+    {
+      id: 4,
+      name: "ALEX WONG",
+      image: `${Sp10}`,
+    },
+    {
+      id: 5,
+      name: "KRISHAN KUMAR",
+      image: `${Sp11}`,
+    },
+    {
+      id: 6,
+      name: "AMAN KUMAR",
+      image: `${Sp12}`,
     },
     {
       id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
-    },
-    {
-      id: 7,
-      name: "VIDISH MISHRA",
-      image: `${Sp7}`,
+      name: "KARAN KUTHE",
+      image: `${Sp13}`,
     },
   ];
 
   const sections = [
-    { year: "2021", speakers: speakers },
-    { year: "2022", speakers: speakers2022 },
-    { year: "2023", speakers: speakers2023 },
+    { year: "2016", speakers: speakers2016 },
+    { year: "2017", speakers: speakers2017 },
+    { year: "2019", speakers: speakers2019 },
     { year: "2024", speakers: speakers2024 },
   ];
 

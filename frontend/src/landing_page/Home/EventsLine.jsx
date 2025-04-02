@@ -13,7 +13,7 @@ const events = [
     date: "Tedx 2013",
     title: "Tedx 2013",
 
-    background: "red",
+    background: "white",
     color: "#fff",
   },
   {
@@ -22,7 +22,7 @@ const events = [
     date: "Tedx 2014",
     title: "Art Director",
 
-    background: "red",
+    background: "white",
     color: "#fff",
   },
   {
@@ -31,7 +31,7 @@ const events = [
     date: "Tedx 2015",
 
     description: "User Experience, Visual Design",
-    background: "red",
+    background: "white",
     color: "#fff",
   },
   {
@@ -40,7 +40,7 @@ const events = [
     date: "Tedx 2016",
 
     description: "User Experience, Visual Design",
-    background: "red",
+    background: "white",
     color: "#fff",
   },
   {
@@ -49,7 +49,7 @@ const events = [
     date: "Tedx 2017",
 
     description: "User Experience, Visual Design",
-    background: "red",
+    background: "white",
     color: "#fff",
   },
   {
@@ -58,7 +58,7 @@ const events = [
     date: "Tedx 2018",
 
     description: "User Experience, Visual Design",
-    background: "red",
+    background: "white",
     color: "#fff",
   },
   {
@@ -67,7 +67,7 @@ const events = [
     date: "Tedx 2019",
 
     description: "User Experience, Visual Design",
-    background: "red",
+    background: "white",
     color: "#fff",
   },
   {
@@ -122,7 +122,7 @@ const events = [
 
     description: "User Experience, Visual Design",
     background: "rgb(33, 150, 243)",
-    color: "#fff",
+    color: "linear-gradient(0deg, black, red)",
   },
 
   // Add more events as needed...
@@ -138,8 +138,8 @@ const EventsLine = () => {
             className={`vertical-timeline-element--${event.type} w-[100%] `}
             contentStyle={{
               background: "transparent",
-              color: "white",
-              // width: "400px",
+              color: event.color,
+              // width: "25rem",
               textAlign: "center",
               fontSize: "2rem",
               paddingTop: "0rem",

@@ -12,6 +12,7 @@ import Saumya from "../../../public/MemberImages/Saumya.png";
 import V_Anuj from "../../../public/MemberImages/V_Anuj.png";
 import Vidish from "../../../public/MemberImages/Vidish.png";
 import Yashasvi from "../../../public/MemberImages/Yashasvi.png";
+import sahil from "../../../public/MemberImages/sahil.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
@@ -71,15 +72,21 @@ function TeamPage() {
       image: `${Ram}`,
     },
     {
-      name: "V.Anuj",
+      name: "Sahil Kamble",
       role: "Senior Manager",
-      image: `${V_Anuj}`,
+      image: `${sahil}`,
     },
     {
       name: "Anushka Tyagi",
       role: "Manager",
       image: `${Anushka}`,
     },
+    {
+      name: "V.Anuj",
+      role: "Senior Manager",
+      image: `${V_Anuj}`,
+    },
+
     {
       name: "Anuj Kumar",
       role: "Manager",

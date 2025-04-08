@@ -30,10 +30,10 @@ function Navbar() {
 
   return (
     <nav
-      className="w-full border-b-1 border-b-gray-500"
+      className="w-full border-b-1  border-b-gray-500 my-auto "
       style={{ backgroundColor: "#0E0E0E" }}
     >
-      <div className="flex justify-between items-center px-4 lg:px-6 py-4 ">
+      <div className="flex justify-between items-center px-4 lg:px-6 py-4 h-14 self-center ">
         <Link to="/" className="flex items-center">
           <img src={NavLogo} alt="Logo" />
         </Link>
@@ -67,25 +67,24 @@ function Navbar() {
                 <button onClick={() => scrollToSection("Tapestry-section")}>
                   <Link
                     to="/"
-                    className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:bg-white"
+                    className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:scale-95"
                   >
                     HOME
                   </Link>
                 </button>
-
-                <button onClick={() => scrollToSection("events-section")}>
+                <button onClick={() => scrollToSection("about-section")}>
                   <Link
                     to="/"
-                    className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:bg-white"
+                    className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:scale-95"
                   >
-                    PREVIOUS EVENTS
+                    ABOUT US
                   </Link>
                 </button>
 
                 <button onClick={() => scrollToSection("speakers-section")}>
                   <Link
                     to="/"
-                    className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:bg-white"
+                    className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:scale-95"
                   >
                     SPEAKERS
                   </Link>
@@ -94,18 +93,17 @@ function Navbar() {
                 <button onClick={() => scrollToSection("team-section")}>
                   <Link
                     to="/team"
-                    className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:bg-white"
+                    className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:scale-95"
                   >
                     TEAM
                   </Link>
                 </button>
-
-                <button onClick={() => scrollToSection("about-section")}>
+                <button onClick={() => scrollToSection("events-section")}>
                   <Link
                     to="/"
-                    className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:bg-white"
+                    className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:scale-95"
                   >
-                    ABOUT US
+                    PREVIOUS EVENTS
                   </Link>
                 </button>
 
@@ -125,25 +123,24 @@ function Navbar() {
             <button onClick={() => scrollToSection("Tapestry-section")}>
               <Link
                 to="/"
-                className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:bg-white"
+                className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:scale-95"
               >
                 HOME
               </Link>
             </button>
-
-            <button onClick={() => scrollToSection("events-section")}>
+            <button onClick={() => scrollToSection("about-section")}>
               <Link
                 to="/"
-                className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:bg-white"
+                className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:scale-95"
               >
-                PREVIOUS EVENTS
+                ABOUT US
               </Link>
             </button>
 
             <button onClick={() => scrollToSection("speakers-section")}>
               <Link
                 to="/"
-                className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:bg-white"
+                className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:scale-95"
               >
                 SPEAKERS
               </Link>
@@ -152,18 +149,17 @@ function Navbar() {
             <button onClick={() => scrollToSection("team-section")}>
               <Link
                 to="/team"
-                className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:bg-white"
+                className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:scale-95"
               >
                 TEAM
               </Link>
             </button>
-
-            <button onClick={() => scrollToSection("about-section")}>
+            <button onClick={() => scrollToSection("events-section")}>
               <Link
                 to="/"
-                className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:bg-white"
+                className="text-white text-sm hover:text-red-500 transition-all duration-300 btn btn-ghost hover:scale-95"
               >
-                ABOUT US
+                PREVIOUS EVENTS
               </Link>
             </button>
 

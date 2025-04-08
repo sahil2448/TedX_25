@@ -135,7 +135,7 @@ export default function Hero() {
             Theme
           </h1>
           {/* grid md:grid-cols-2 gap-8 items-center */}
-          <div className="w-full flex flex-col md:flex-row md:justify-between md:items-center">
+          <div className="w-full flex flex-col md:flex-row md:justify-between md:items-center gap-20">
             <div className="theme-content max-w-2xl">
               <p className="text-sm md:text-base leading-relaxed">
                 TEDxIITRoorkee is organized by a group of enthusiasts who form a

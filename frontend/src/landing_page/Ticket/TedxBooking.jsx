@@ -32,8 +32,8 @@ export default function TedxBooking() {
         />
       </div>
 
-      <div className="container mx-auto px-4 py-12 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-6">
+      <div className="container mx-auto py-12 relative z-10 ">
+        <div className="flex flex-col lg:flex-row gap-6 mx-10 md:mx-0">
           <div className="lg:w-1/3">
             <h1 className="text-6xl md:text-7xl font-extrabold text-white tracking-tight mb-6">
               BOOK NOW
@@ -47,16 +47,16 @@ export default function TedxBooking() {
           </div>
 
           <div className="flex flex-col lg:flex-row gap-6 lg:w-4/5">
-            <div className="bg-gradient-to-t from-red-700 to-red-500 overflow-hidden lg:w-1/3">
-              <div className="p-6">
+            <div className="bg-gradient-to-t from-red-700 to-red-500 overflow-hidden lg:w-1/3 rounded-lg">
+              <div className="p-6 h-[33rem] flex flex-col justify-between ">
                 <div>
-                  <h2 className="text-2xl font-bold text-white mb-2">
+                  <h2 className="text-2xl font-bold text-white mb-2 text-center">
                     Premium Bundle
                   </h2>
-                  <div className="w-full h-0.5 bg-white/30 mb-6"></div>
+                  <div className="w-full h-0.5 bg-white mb-6"></div>
                 </div>
 
-                <div className="flex justify-center mb-6">
+                <div className="flex justify-center ">
                   <div className="flex items-center gap-2">
                     <img
                       src={tickets2}
@@ -146,7 +146,7 @@ export default function TedxBooking() {
                   </div>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-6 pl-4">
                   <div className="flex items-center gap-2">
                     <span className="text-white font-medium">
                       Bundle Price -
@@ -154,16 +154,17 @@ export default function TedxBooking() {
                     <span className="text-white/70 line-through text-sm line-through">
                       ₹1,198
                     </span>
-                    <span className="text-white font-bold">₹998</span>
-                    <span className="text-white bg-white/20 px-2 py-0.5 rounded text-xs">
+                    <span className="text-white font-bold">₹999</span>
+                    <span className="text-white bg-white/20 px-2 py-0.5 rounded text-xs text-yellow-200">
                       16% off
                     </span>
                   </div>
                 </div>
 
                 <a
-                  href=""
+                  href="https://forms.gle/EMXvZbQt1qQaiH7EA"
                   className="relative w-[60%] mx-auto bg-[#ff0000] text-white py-3 flex items-center justify-center gap-2 rounded overflow-hidden group transition-colors cursor-pointer"
+                  target="_blank"
                 >
                   <span className="absolute inset-0 bg-black scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
                   <span className="relative z-10 flex items-center gap-2">
@@ -174,10 +175,10 @@ export default function TedxBooking() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-t from-red-600 via-white/90 to-white overflow-hidden lg:w-1/3">
+            <div className="bg-gradient-to-t from-red-600 via-white/90 to-white overflow-hidden lg:w-1/3 rounded-lg  h-[33rem] flex flex-col">
               <div className="p-6 h-full flex flex-col justify-between">
                 <div>
-                  <h2 className="text-2xl font-bold text-[#ed2024] mb-2">
+                  <h2 className="text-2xl font-bold text-[#ed2024] mb-2 text-center">
                     TEDx Merchandise
                   </h2>
                   <div className="w-full h-0.5 bg-red-500 mb-6"></div>
@@ -227,8 +228,9 @@ export default function TedxBooking() {
                 </div>
 
                 <a
-                  href=""
+                  href="https://forms.gle/UW98dUDGD8VBSiHAA"
                   className="relative w-[60%] mx-auto bg-[#ff0000] text-white py-3 flex items-center justify-center gap-2 rounded overflow-hidden group transition-colors cursor-pointer"
+                  target="_blank"
                 >
                   <span className="absolute inset-0 bg-black scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
                   <span className="relative z-10 flex items-center gap-2">
@@ -239,13 +241,13 @@ export default function TedxBooking() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-t from-red-700 to-red-500 overflow-hidden lg:w-1/3">
+            <div className="bg-gradient-to-t from-red-700 to-red-500 overflow-hidden lg:w-1/3 rounded-lg  h-[33rem]  flex flex-col">
               <div className="p-6 flex flex-col justify-between h-full">
                 <div>
-                  <h2 className="text-2xl font-bold text-white mb-2">
+                  <h2 className="text-2xl font-bold text-white mb-2 text-center">
                     Get Ticket
                   </h2>
-                  <div className="w-full h-0.5 bg-white/30 mb-6"></div>
+                  <div className="w-full h-0.5 bg-white mb-6"></div>
                 </div>
 
                 <div className="flex justify-center mb-6">
@@ -301,15 +303,17 @@ export default function TedxBooking() {
                       ₹599
                     </span>
                     <span className="text-white font-bold">₹499</span>
-                    <span className="text-white bg-white/20 px-2 py-0.5 rounded text-xs">
+
+                    <span className="text-white bg-white/20 px-2 py-0.5 rounded text-xs text-yellow-200">
                       16% off
                     </span>
                   </div>
                 </div>
 
                 <a
-                  href=""
+                  href="https://forms.gle/EMXvZbQt1qQaiH7EA"
                   className="relative w-[60%] mx-auto bg-[#ff0000] text-white py-3 flex items-center justify-center gap-2 rounded overflow-hidden group transition-colors cursor-pointer"
+                  target="_blank"
                 >
                   <span className="absolute inset-0 bg-black scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
                   <span className="relative z-10 flex items-center gap-2">

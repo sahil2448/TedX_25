@@ -226,100 +226,132 @@ const Speakers = () => {
     centerActiveSpeaker(activeSpeaker);
   }, [activeSpeaker]);
 
+  const speakers2025 = [
+    {
+      id: 1,
+      name: "Mohit Tyagi",
+      //  image: `${}`
+    },
+    {
+      id: 2,
+      name: "Soumesh Pandey",
+      // image: `${}`,
+    },
+    {
+      id: 3,
+      name: "Rahul Choudhary",
+      // image: `${}`,
+    },
+    {
+      id: 4,
+      name: "Bijay N Nair",
+      // image: `${}`,
+    },
+    {
+      id: 5,
+      name: "Azhar Iqbal",
+      // image: `${}`,
+    },
+    {
+      id: 6,
+      name: "Sumeet Anand",
+      // image: `${}`,
+    },
+  ];
   const speakers2024 = [
     { id: 1, name: "ANUJ", image: `${Sp1}` },
     {
       id: 2,
-      name: "SARAH SMITH",
+      name: "SAURABH, MANISHA",
       image: `${Sp2}`,
     },
     {
       id: 3,
-      name: "VIDISH MISHRA",
+      name: "JAI MADAAN",
       image: `${Sp3}`,
     },
     {
       id: 4,
-      name: "ALEX WONG",
+      name: "AMAN DHATTARWAAL",
       image: `${Sp4}`,
     },
     {
       id: 5,
-      name: "KRISHAN KUMAR",
+      name: "DHANAJYA JOSHI",
       image: `${Sp5}`,
     },
     {
       id: 6,
-      name: "AMAN KUMAR",
+      name: "RAJEEV BRARWAN",
       image: `${Sp6}`,
     },
     {
       id: 7,
-      name: "KARAN KUTHE",
+      name: "MANISH BEHL",
       image: `${Sp7}`,
     },
   ];
   const speakers2016 = [
-    { id: 1, name: "ANUJ", image: `${Sp20}` },
+    { id: 1, name: "ANSHU MOR", image: `${Sp20}` },
     {
       id: 2,
-      name: "SARAH SMITH",
+      name: "KDEORHH",
       image: `${Sp21}`,
     },
     {
       id: 3,
-      name: "VIDISH MISHRA",
+      name: "SUSHRUTI KRISHNA",
       image: `${Sp22}`,
     },
     {
       id: 4,
-      name: "ALEX WONG",
+      name: "VIVEK ANGIHOTRI",
       image: `${Sp23}`,
     },
     {
       id: 5,
-      name: "KRISHAN KUMAR",
+      name: "KIRAN MRINAL",
       image: `${Sp24}`,
     },
   ];
   const speakers2017 = [
-    { id: 1, name: "ANUJ", image: `${Sp13}` },
+    // { id: 1, name: "ANUJ", image: `${Sp13}` },
     {
       id: 2,
-      name: "SARAH SMITH",
+      name: "SHARELL COOK",
       image: `${Sp14}`,
     },
     {
       id: 3,
-      name: "VIDISH MISHRA",
+      name: "SHARON PRABHAKAR",
       image: `${Sp15}`,
     },
     {
       id: 4,
-      name: "ALEX WONG",
+      name: "BISTRITI PODDAR",
       image: `${Sp16}`,
     },
     {
       id: 5,
-      name: "KRISHAN KUMAR",
+      name: "ANKUR WARIKOO",
       image: `${Sp17}`,
     },
     {
       id: 6,
-      name: "AMAN KUMAR",
+      name: "SAUMITRA BHAT",
       image: `${Sp18}`,
     },
     {
       id: 7,
-      name: "KARAN KUTHE",
+      name: "BIJESH AMIN",
       image: `${Sp19}`,
     },
   ];
   const speakers2019 = [
-    { id: 1, name: "ANUJ", image: `${Sp7}` },
+    { id: 1, name: "MANISH BEHL", image: `${Sp7}` },
     {
       id: 2,
-      name: "SARAH SMITH",
+      name: "JOSEPH RADHIK",
       image: `${Sp8}`,
     },
     // {
@@ -329,31 +361,32 @@ const Speakers = () => {
     // },
     {
       id: 4,
-      name: "ALEX WONG",
+      name: "NAVNEET NAIR",
       image: `${Sp10}`,
     },
     {
       id: 5,
-      name: "KRISHAN KUMAR",
+      name: "MAYA",
       image: `${Sp11}`,
     },
     {
       id: 6,
-      name: "AMAN KUMAR",
+      name: "NARPATH RAMAN",
       image: `${Sp12}`,
     },
     {
       id: 7,
-      name: "KARAN KUTHE",
+      name: "PRASHANT DHAWAN",
       image: `${Sp13}`,
     },
   ];
 
   const sections = [
-    { year: "2016", speakers: speakers2016 },
-    { year: "2017", speakers: speakers2017 },
-    { year: "2019", speakers: speakers2019 },
+    { year: "2025", speakers: speakers2025 },
     { year: "2024", speakers: speakers2024 },
+    { year: "2019", speakers: speakers2019 },
+    { year: "2017", speakers: speakers2017 },
+    { year: "2016", speakers: speakers2016 },
   ];
 
   return (
@@ -393,7 +426,7 @@ const Speakers = () => {
           ))}
         </div>
         <div>
-          <div className="flex flex-col items-center sm:flex-row md:gap-10 md:justify-center h-[25rem] ">
+          <div className="flex flex-col items-center sm:flex-row md:gap-10 md:justify-center md:h-[25rem] ">
             <div
               className="flex flex-col justify-center items-end md:pl-12"
               ref={speakerNameRef}
@@ -424,7 +457,7 @@ const Speakers = () => {
               </div>
             </div>
           </div>
-          <div className="relative z-10  flex justify-center items-end ">
+          <div className="relative z-10  flex justify-center items-end">
             <div
               ref={carouselRef}
               className="flex gap-4 px-4 overflow-x-auto pb-8 pt-3 carousel carousel-center  max-w-md md:max-w-2xl mx-auto"

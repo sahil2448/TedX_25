@@ -5,13 +5,12 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-// Array of event objects
 const events = [
   {
     id: 1,
     type: "work",
-    date: "Tedx 2013",
-    title: "Tedx 2013",
+    date: "TEDxIITRoorkee 2013",
+    title: "TEDxIITRoorkee 2013",
 
     background: "white",
     color: "#fff",
@@ -19,7 +18,7 @@ const events = [
   {
     id: 2,
     type: "work",
-    date: "Tedx 2014",
+    date: "TEDxIITRoorkee 2014",
     title: "Art Director",
 
     background: "white",
@@ -28,7 +27,7 @@ const events = [
   {
     id: 3,
     type: "work",
-    date: "Tedx 2015",
+    date: "TEDxIITRoorkee 2015",
 
     description: "User Experience, Visual Design",
     background: "white",
@@ -37,7 +36,7 @@ const events = [
   {
     id: 4,
     type: "work",
-    date: "Tedx 2016",
+    date: "TEDxIITRoorkee 2016",
 
     description: "User Experience, Visual Design",
     background: "white",
@@ -46,7 +45,7 @@ const events = [
   {
     id: 5,
     type: "work",
-    date: "Tedx 2017",
+    date: "TEDxIITRoorkee 2017",
 
     description: "User Experience, Visual Design",
     background: "white",
@@ -55,7 +54,7 @@ const events = [
   {
     id: 4,
     type: "work",
-    date: "Tedx 2018",
+    date: "TEDxIITRoorkee 2018",
 
     description: "User Experience, Visual Design",
     background: "white",
@@ -64,7 +63,7 @@ const events = [
   {
     id: 4,
     type: "work",
-    date: "Tedx 2019",
+    date: "TEDxIITRoorkee 2019",
 
     description: "User Experience, Visual Design",
     background: "white",
@@ -73,80 +72,86 @@ const events = [
   {
     id: 4,
     type: "work",
-    date: "Tedx 2020",
+    date: "TEDxIITRoorkee 2020",
 
     description: "User Experience, Visual Design",
     background: "red",
-    color: "#fff",
+    color: "red",
   },
   {
     id: 4,
     type: "work",
-    date: "Tedx 2021",
+    date: "TEDxIITRoorkee 2021",
 
     description: "User Experience, Visual Design",
     background: "red",
-    color: "#fff",
+    color: "red",
   },
   {
     id: 4,
     type: "work",
-    date: "Tedx 2022",
+    date: "TEDxIITRoorkee 2022",
 
     description: "User Experience, Visual Design",
     background: "red",
-    color: "#fff",
+    color: "red",
   },
   {
     id: 4,
     type: "work",
-    date: "Tedx 2023",
+    date: "TEDxIITRoorkee 2023",
 
     description: "User Experience, Visual Design",
     background: "red",
-    color: "#fff",
+    color: "red",
   },
   {
     id: 4,
     type: "work",
-    date: "Tedx 2024",
+    date: "TEDxIITRoorkee 2024",
 
     description: "User Experience, Visual Design",
     background: "red",
-    color: "#fff",
+    color: "red",
   },
   {
     id: 4,
     type: "work",
-    date: "Tedx 2025",
+    date: "TEDxIITRoorkee 2025",
 
     description: "User Experience, Visual Design",
-    background: "rgb(33, 150, 243)",
-    color: "linear-gradient(0deg, black, red)",
+    background: "#fff",
+    color: "#fff",
   },
-
-  // Add more events as needed...
 ];
 
 const EventsLine = () => {
   return (
-    <div>
+    <div className="w-full lg:w-[65%] flex justify-center align-middle my-auto">
       <VerticalTimeline>
         {events.map((event) => (
           <VerticalTimelineElement
             key={event.id}
-            className={`vertical-timeline-element--${event.type} w-[100%] `}
             contentStyle={{
-              background: "transparent",
-              color: event.color,
-              // width: "25rem",
+              background: "#343434",
+              backgroundColor: "transparent",
               textAlign: "center",
-              fontSize: "2rem",
+              fontStyle: "italic",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textJustify: "auto",
+              fontSize: "28px",
               paddingTop: "0rem",
               paddingBottom: "0rem",
               paddingLeft: "0rem",
               paddingRight: "0rem",
-              fontFamily: "serif",
+              borderTop: "3px solid white",
+              borderLeft: "3px solid white",
+              borderRight: "3px solid white",
+              fontFamily: "Inter, sans-serif",
+              style: "transperant",
+              color: event.color,
             }}
             contentArrowStyle={{
               borderRight: `7px solid ${event.background}`,
@@ -155,6 +160,7 @@ const EventsLine = () => {
             iconStyle={{
               background: event.background,
               color: event.color,
+
               width: "20px",
               height: "20px",
               lineHeight: "8px",

@@ -77,30 +77,20 @@ function TeamPage() {
       image: `${sahil}`,
     },
     {
-      name: "Anushka Tyagi",
-      role: "Manager",
-      image: `${Anushka}`,
-    },
-    {
       name: "V.Anuj",
       role: "Senior Manager",
       image: `${V_Anuj}`,
+    },
+    {
+      name: "Anushka Tyagi",
+      role: "Manager",
+      image: `${Anushka}`,
     },
 
     {
       name: "Anuj Kumar",
       role: "Manager",
       image: `${Anuj}`,
-    },
-    {
-      name: "Ramavtar Uranw",
-      role: "Senior Manager",
-      image: `${Aman}`,
-    },
-    {
-      name: "V.Anuj",
-      role: "Senior Manager",
-      image: `${Aman}`,
     },
   ];
 

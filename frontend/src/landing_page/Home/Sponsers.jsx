@@ -12,7 +12,7 @@ import TOI from "../../../public/Sponsers/TOI.png";
 const Sponsers = () => {
   return (
     <main>
-      <section className="h-[20vh] md:w-full">
+      <section className="min-h-full md:w-full md:pb-10">
         <h1
           className="text-[#d9d9d9] text-7xl  md:text-7xl lg:text-8xl text-center mb-16  font-passion font-extrabold leading-normal"
           style={{

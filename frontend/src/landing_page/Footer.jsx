@@ -5,10 +5,10 @@ import NavLogo from "../../public/Logos/logo-white.png";
 function Footer() {
   return (
     <footer
-      className="py-12 px-6 border-t border-[#555555] flex flex-wrap"
+      className="py-12 px-10 md:px-6 border-t border-[#555555] flex flex-wrap"
       style={{ backgroundColor: "#0E0E0E" }}
     >
-      <div className="max-w-7xl mx-auto flex justify-between gap-20 flex flex-wrap">
+      <div className="max-w-7xl mx-auto flex justify-between gap-15 md:gap-20  flex-wrap">
         <div>
           <Link to="/" className="flex items-center">
             <img src={NavLogo} alt="" />
@@ -17,7 +17,7 @@ function Footer() {
 
         <div>
           <h3 className="font-bold text-white mb-4">Events & Incentives</h3>
-          <ul className="space-y-2 text-sm text-[#b6b6b6]">
+          <ul className="space-y-2 text-md md:text-sm text-[#b6b6b6]">
             <li>
               <Link to="#" className="hover:text-white">
                 Pre-Ted Event
@@ -38,7 +38,7 @@ function Footer() {
 
         <div>
           <h3 className="font-bold text-white mb-4">Follow Us</h3>
-          <ul className="space-y-2 text-sm text-[#b6b6b6]">
+          <ul className="space-y-2 text-md md:text-sm text-[#b6b6b6]">
             <li>
               <Link to="#" className="hover:text-white">
                 Twitter
@@ -64,7 +64,7 @@ function Footer() {
 
         <div>
           <h3 className="font-bold text-white mb-4">Community</h3>
-          <ul className="space-y-2 text-sm text-[#b6b6b6]">
+          <ul className="space-y-2 text-md md:text-sm text-[#b6b6b6]">
             <li>
               <Link to="#" className="hover:text-white">
                 TED
@@ -83,13 +83,13 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="mx-auto mt-12">
+      <div className="md:mx-auto mt-12 ">
         <div className="">
           <div>
-            <h3 className="font-bold text-white mb-4">
+            <h3 className="font-bold text-white  mb-4">
               TedxIITRoorkee Recorded
             </h3>
-            <p className="text-sm text-[#b6b6b6] mb-4">
+            <p className="text-md text-[#b6b6b6] mb-4">
               Watch the latest TEDxIITRoorkee events on your screen
             </p>
             <a

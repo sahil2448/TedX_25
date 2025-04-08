@@ -1,33 +1,32 @@
 import { useEffect } from "react";
-import Frame from "../../../public/Speakers2024/Frame.png";
+import Frame from "/Speakers2024/Frame.png";
 import { useRef, useState } from "react";
 import { gsap } from "gsap";
 
-const Sp1 = "../../../public/Speakers2024/Sp1.png";
-// import Sp1 from "../../../public/Speakers2024/Sp1.png";
-const Sp2 = "../../../public/speakers2024/Sp2.png";
-const Sp3 = "../../../public/speakers2024/Sp3.png";
-const Sp4 = "../../../public/speakers2024/Sp4.png";
-const Sp5 = "../../../public/speakers2024/Sp5.png";
-const Sp6 = "../../../public/speakers2024/Sp6.png";
-const Sp7 = "../../../public/Sp2019/Sp7.png";
-const Sp8 = "../../../public/Sp2019/Sp8.png";
-// import Sp9 from "../../../public/Sp2019/Sp9.png";
-const Sp10 = "../../../public/Sp2019/Sp10.png";
-const Sp11 = "../../../public/Sp2019/Sp11.png";
-const Sp12 = "../../../public/Sp2019/Sp12.png";
-const Sp13 = "../../../public/Sp2019/Sp13.png"; // 2019
-const Sp14 = "../../../public/Sp2017/Sp14.png";
-const Sp15 = "../../../public/Sp2017/Sp15.png";
-const Sp16 = "../../../public/Sp2017/Sp16.png";
-const Sp17 = "../../../public/Sp2017/Sp17.png";
-const Sp18 = "../../../public/Sp2017/Sp18.png";
-const Sp19 = "../../../public/Sp2017/Sp19.png"; // 2017
-const Sp20 = "../../../public/Sp2016/Sp20.png";
-const Sp21 = "../../../public/Sp2016/Sp21.png";
-const Sp22 = "../../../public/Sp2016/Sp22.png";
-const Sp23 = "../../../public/Sp2016/Sp23.png";
-const Sp24 = "../../../public/Sp2016/Sp24.png";
+import Sp1 from "/Speakers2024/Sp1.png";
+import Sp2 from "/Speakers2024/Sp2.png";
+import Sp3 from "/Speakers2024/Sp3.png";
+import Sp4 from "/Speakers2024/Sp4.png";
+import Sp5 from "/Speakers2024/Sp5.png";
+import Sp6 from "/Speakers2024/Sp6.png";
+import Sp7 from "/Sp2019/Sp7.png";
+import Sp8 from "/Sp2019/Sp8.png";
+// import Sp9 from "/Sp2019/Sp9.png";
+import Sp10 from "/Sp2019/Sp10.png";
+import Sp11 from "/Sp2019/Sp11.png";
+import Sp12 from "/Sp2019/Sp12.png";
+import Sp13 from "/Sp2019/Sp13.png"; // 2019
+import Sp14 from "/Sp2017/Sp14.png";
+import Sp15 from "/Sp2017/Sp15.png";
+import Sp16 from "/Sp2017/Sp16.png";
+import Sp17 from "/Sp2017/Sp17.png";
+import Sp18 from "/Sp2017/Sp18.png";
+import Sp19 from "/Sp2017/Sp19.png"; // 2017
+import Sp20 from "/Sp2016/Sp20.png";
+import Sp21 from "/Sp2016/Sp21.png";
+import Sp22 from "/Sp2016/Sp22.png";
+import Sp23 from "/Sp2016/Sp23.png";
+import Sp24 from "/Sp2016/Sp24.png";
 
 const Speakers = () => {
   const [activeSpeaker, setActiveSpeaker] = useState(0);

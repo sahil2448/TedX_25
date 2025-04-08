@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect } from "react";
 import Frame from "../../../public/Speakers2024/Frame.png";
 import { useRef, useState } from "react";

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Frame from "../../../public/Speakers2024/Frame.png";
 import { useRef, useState } from "react";
 import { gsap } from "gsap";
-import Sp1 from "../../../public/speakers2024/Sp1.png";
+import Sp1 from "../../../public/Speakers2024/Sp1.png";
 import Sp2 from "../../../public/speakers2024/Sp2.png";
 import Sp3 from "../../../public/speakers2024/Sp3.png";
 import Sp4 from "../../../public/speakers2024/Sp4.png";

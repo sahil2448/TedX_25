@@ -1,20 +1,16 @@
 import React, { useEffect } from "react";
 import Hero from "./Hero";
 import SpearkersPage from "./SpearkersPage";
-import AboutUsPage from "./AboutUsPage";
 import TapestryPage from "./TapestryPage";
 import SponsersPage from "./SponsersPage";
-import Navbar from "../Navbar";
 import { useState, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import Tapestry from "./Tapestry";
 import EventsLinePage from "./EventsLinePage";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
   const heroRef = useRef(null);
-  const speakerRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
